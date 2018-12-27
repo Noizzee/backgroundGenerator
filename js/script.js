@@ -19,11 +19,12 @@ function setColor() {
   css.textContent = body.style.background + ";";
 }
 
-function randomize(random1, random2, random3) {
-  random1 = Math.floor(Math.random() * 255);
-  random2 = Math.floor(Math.random() * 255);
-  random3 = Math.floor(Math.random() * 255);
-  body.style.background = "linear-gradient(to right, rgb(" + random1 + ", " + random2 + ", " + random3 + "), rgb(" + random2 + ", " + random3 + ", " + random1 + ")";
+function randomize() {
+  var randomNumbers = [];
+  for (let i = 0; i < 6; i++) {
+    randomNumbers.push(Math.floor(Math.random() * 255));
+  }
+  body.style.background = "linear-gradient(to right, rgb(" + randomNumbers[0] + ", " + randomNumbers[1] + ", " + randomNumbers[2] + "), rgb(" + randomNumbers[3] + ", " + randomNumbers[4] + ", " + randomNumbers[5] + ")";
   css.textContent = body.style.background + ";";
 }
 
